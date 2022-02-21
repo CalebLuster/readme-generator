@@ -3,6 +3,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
+const generateMarkdown = require("./Develop/utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -49,48 +50,20 @@ const questions = [
     name: "usage",
     message: "What can you use your project for that should be in the readme?",
   },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
-  // {
-  //     type: "input",
-  //     name: "",
-  //     message: "",
-  // },
 ];
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions);
+  inquirer.prompt(questions).then((inquirerAnswers) => {
+    console.log("loading... this will only take a minute.");
+    writeToFile(
+      "./fileDump/README.md",
+      generateMarkdown({ ...inquirerAnswers })
+    );
+  });
 }
 // Function call to initialize app
 init();
