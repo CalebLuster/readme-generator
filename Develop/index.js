@@ -49,41 +49,41 @@ const questions = [
     name: "usage",
     message: "What can you use your project for that should be in the readme?",
 },
-{
-    type: "input",
-    name: "",
-    message: "",
-},
-{
-    type: "input",
-    name: "",
-    message: "",
-},
-{
-    type: "input",
-    name: "",
-    message: "",
-},
-{
-    type: "input",
-    name: "",
-    message: "",
-},
-{
-    type: "input",
-    name: "",
-    message: "",
-},
-{
-    type: "input",
-    name: "",
-    message: "",
-},
-{
-    type: "input",
-    name: "",
-    message: "",
-},
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
+// {
+//     type: "input",
+//     name: "",
+//     message: "",
+// },
 
 
 
