@@ -1,36 +1,36 @@
-# Fingerprint app animation
+# c
 
 
-    ![GitHub license](https://img.shields.io/badge/license-MIT-red.svg)
+   [license](https://img.shields.io/badge/license-undefined-red.svg)
 
 
-    # GitHub Link
+   # GitHub Link
 
 
-    [CalebLuster](https://github.com/CalebLuster/)
+   * [c](https://github.com/c/)
 
 
-    # Project Description
+   # Project Description
 
 
-    A simple animation using only HTML and CSS!
+   c
 
 
-    # Table of Contents
+   # Table of Contents
 
 
-    * [Uses](#usage)
+   * [Uses](#usageContent)
 
 
-    * [Installations](#dependencies)
+   * [Installations](#dependenciesPackages)
 
 
-    
+   
 * [License](#license)
 
 
 
-    * [Test](#test)
+    * [Test](#testingContent)
 
 
     # Dependencies
@@ -38,27 +38,27 @@
 
     To make sure you are able to run this application please download the dependencies with the following command;
 
-    ===============================================
-    npm 1
-    ===============================================
+    
+    undefined
+    
 
     # Uses
 
 
-    Easy Cool Phone Quick
+    c
 
 
 
     ### License 
-      Licensed under MIT.
-      Copyright MIT. All rights reserved.
+      Licensed under undefined.
+      Copyright undefined. All rights reserved.
       
 
 
     # Email
 
 
-    You can reach me at: cwl117@outlook.com
+    You can reach me at: c
 
 
 
@@ -67,7 +67,7 @@
 
     For tests, use the following command;
 
-    ========================================
+    
     npm test
-    ========================================
+    
     

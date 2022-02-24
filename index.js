@@ -35,19 +35,19 @@ const questions = [
   },
   {
     type: "input",
-    name: "dependencies",
+    name: "dependenciesPackages",
     message: "Would you like to install any dependencies?",
     default: "npm 1",
   },
   {
     type: "input",
-    name: "test",
+    name: "testingContent",
     message: "Please select what command you would like to use to run a test",
     default: "npm test",
   },
   {
     type: "input",
-    name: "usage",
+    name: "usageContent",
     message: "What can you use your project for that should be in the readme?",
   },
 ];
@@ -57,11 +57,11 @@ function writeToFile(fileName, data) {
 }
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then((inquirerAnswers) => {
+  inquirer.prompt(questions).then((answers) => {
     console.log("loading... this will only take a minute.");
     writeToFile(
       "./fileDump/README.md",
-      generateMarkdown({ ...inquirerAnswers })
+      generateMarkdown({ ...answers })
     );
   });
 }

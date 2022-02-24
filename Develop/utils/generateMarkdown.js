@@ -1,16 +1,16 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-red.svg)`;
+function renderLicenseBadge(licenseParamter) {
+  if (licenseParamter !== "None") {
+    return `[license](https://img.shields.io/badge/license-${licenseParamter}-red.svg)`;
   }
   return "";
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license !== "None") {
+function renderLicenseLink(licenseParamter) {
+  if (licenseParamter !== "None") {
     return `\n* [License](#license)\n`;
   }
   return "";
@@ -18,11 +18,11 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== "None") {
+function renderLicenseSection(licenseParamter) {
+  if (licenseParamter !== "None") {
     return `### License 
-      Licensed under ${license}.
-      Copyright ${license}. All rights reserved.
+      Licensed under ${licenseParamter}.
+      Copyright ${licenseParamter}. All rights reserved.
       `;
   }
   return "";
@@ -33,34 +33,34 @@ function generateMarkdown(data) {
   return `# ${data.projectTitle}
 
 
-    ${renderLicenseBadge(data.license)}
+   ${renderLicenseBadge(data.licenseParamter)}
 
 
-    # GitHub Link
+   # GitHub Link
 
 
-    [${data.githubUsername}](https://github.com/${data.githubUsername}/)
+   * [${data.githubUsername}](https://github.com/${data.githubUsername}/)
 
 
-    # Project Description
+   # Project Description
 
 
-    ${data.projectDescription}
+   ${data.projectDescription}
 
 
-    # Table of Contents
+   # Table of Contents
 
 
-    * [Uses](#usage)
+   * [Uses](#usageContent)
 
 
-    * [Installations](#dependencies)
+   * [Installations](#dependenciesPackages)
 
 
-    ${renderLicenseLink(data.license)}
+   ${renderLicenseLink(data.licenseParamter)}
 
 
-    * [Test](#test)
+    * [Test](#testingContent)
 
 
     # Dependencies
@@ -68,18 +68,18 @@ function generateMarkdown(data) {
 
     To make sure you are able to run this application please download the dependencies with the following command;
 
-    ===============================================
+    
     ${data.dependencies}
-    ===============================================
+    
 
     # Uses
 
 
-    ${data.usage}
+    ${data.usageContent}
 
 
 
-    ${renderLicenseSection(data.license)}
+    ${renderLicenseSection(data.licenseParamter)}
 
 
     # Email
@@ -94,9 +94,9 @@ function generateMarkdown(data) {
 
     For tests, use the following command;
 
-    ========================================
-    ${data.test}
-    ========================================
+    
+    ${data.testingContent}
+    
     
 `;
 }
