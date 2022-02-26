@@ -50,6 +50,11 @@ const questions = [
     name: "usageContent",
     message: "What can you use your project for that should be in the readme?",
   },
+  {
+    type: "input",
+    name: "contributersSection",
+    message: "Who all helped for this section?",
+  },
 ];
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -59,10 +64,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     console.log("loading... this will only take a minute.");
-    writeToFile(
-      "./fileDump/README.md",
-      generateMarkdown({ ...answers })
-    );
+    writeToFile("./fileDump/README.md", generateMarkdown({ ...answers }));
   });
 }
 // Function call to initialize app

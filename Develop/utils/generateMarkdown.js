@@ -69,7 +69,7 @@ function generateMarkdown(data) {
     To make sure you are able to run this application please download the dependencies with the following command;
 
     
-    ${data.dependencies}
+    ${data.dependenciesPackages}
     
 
     # Uses
@@ -80,6 +80,11 @@ function generateMarkdown(data) {
 
 
     ${renderLicenseSection(data.licenseParamter)}
+
+
+    ## The Great Person/People Behind this project!
+
+    ${data.contributersSection}
 
 
     # Email
@@ -97,6 +102,7 @@ function generateMarkdown(data) {
     
     ${data.testingContent}
     
+
     
 `;
 }
