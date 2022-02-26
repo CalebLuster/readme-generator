@@ -87,7 +87,7 @@ function generateMarkdown(data) {
     ${data.contributersSection}
 
 
-    # Email
+    # Questions or Concerns
 
 
     You can reach me at: ${data.emailAdress}
